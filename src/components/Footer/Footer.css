@@ -1,0 +1,42 @@
+/* .list{
+    position: relative;
+} */
+.list li{
+    font-size: 20px;
+    font-weight: 800;
+    position: relative;
+    color: red;
+    cursor: pointer;
+
+
+}
+.list li::after{
+            content: "";
+            width: 0;
+            height: 2px;
+            background-color: black;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            cursor: pointer;
+}
+li:hover::after{
+    animation: anim;
+    animation-duration: .3s;
+}
+
+
+@keyframes anim {
+    0%{
+        width: 0%;
+        left: 0;
+    }
+    50%{
+        width:100%;
+        left: 0;
+    }
+    100%{
+        width: 0%;
+        left: 100%;
+    }
+}
